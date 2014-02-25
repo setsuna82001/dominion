@@ -1,0 +1,163 @@
+<h1>Display#index</h1>
+<p>Find me in app/views/display/index.html.erb</p>
+
+<%= form_tag( "/#{@params[:controller]}/#{@params[:action]}" ) do %>
+
+	<% #*********************** series select( check ) box *********************** %>
+	<table border="1" width="70%" align="center">
+		<% tr_size	= 2 #行数 %>
+		<% td_size	= @series.size / tr_size %>
+		<% series	= @series.to_a %>
+		<% tr_size.times do | tridx | %>
+			<tr>
+				<% tdbase = td_size * tridx %>
+				<% td_size.times do | tdidx | %>
+					<td width="<%=( 100 / td_size - 1 ) %>%">
+						<input	type="checkbox" name="series[]"
+								id="series_<%=tdbase + tdidx%>"
+								value="<%=series[ tdbase + tdidx ][0]%>"
+								<% if @params[:series].include?( series[ tdbase + tdidx ][0] )%>checked<% end %>
+						/>
+						<label for="series_<%=tdbase + tdidx%>">
+<!--
+							<%=series[ tdbase + tdidx ][1][:name]%>
+-->
+							<%=series[ tdbase + tdidx ][1][:text]%>
+						</label>
+					</td>
+				<% end %>
+			</tr>
+		<% end %>
+	</table>
+	<% #********************************************** %>
+
+	<br />
+	<hr />
+	<div style="position: center; text-align: center;">
+		<input type="text"   name="mainlist" value="<%=@params[:mainlist]%>" placeholder="キー入力" autocomplete="off" />
+		<input type="hidden" name="sublist"  value="<%=@params[:sublist]%>" />
+		<input type="hidden" name="optlist"  value="<%=@params[:optlist]%>" />
+		<input type="submit" name="submit"  value="送信" />
+		<input type="button" name="newlist" value="新規" />
+		<input type="button" name="allselect" value="全選択" />
+	</div>
+	<hr />
+	<br />
+<% end %>
+
+
+<% #*********************** main *********************** %>
+<% unless @main_lists.empty? %>
+	<table border="1" width="100%" align="center">
+		<% tr_size	= 2 #行数 %>
+		<% td_size	= @main_lists.size / tr_size %>
+		<% tr_size.times do | tridx | %>		
+			<tr>
+				<% tdbase = td_size * tridx %>
+				<% ( ( 0 + tdbase )..( td_size - 1 + tdbase ) ).each do | tdidx | %>
+					<td width="<%=( 100 / td_size - 1 ) %>%">
+						<table border="2" width="100%">
+							<tr>
+								<th width="80%">
+<!--
+									<%=@card[ @main_lists[ tdidx ] ][:id]%>
+-->									<%=@series[ @card[ @main_lists[ tdidx ] ][:series] ][ :text ]%>
+								</th>
+								<th>
+									<%=@card[ @main_lists[ tdidx ] ][:cost]%>
+								</th>
+							</tr>
+							<tr>
+								<td colspan="2" style="text-align: center;">
+<!--
+									<%=@card[ @main_lists[ tdidx ] ][:name]%>
+-->
+									<%=@card[ @main_lists[ tdidx ] ][:text]%>
+								</td>
+							</tr>
+						</table>
+					</td>
+				<% end %>
+			</tr>
+		<% end %>
+	</table>
+<% end %>
+<% #********************************************** %>
+
+<br/>
+<br/>
+
+
+<% #*********************** sub *********************** %>
+<% unless @sub_lists.empty? %>
+	<table border="1" width="100%" align="center">
+		<% tr_size	= 2 #行数 %>
+		<% td_size	= @sub_lists.size / tr_size %>
+		<% tr_size.times do | tridx | %>		
+			<tr>
+				<% tdbase = td_size * tridx %>
+				<% ( ( 0 + tdbase )..( td_size - 1 + tdbase ) ).each do | tdidx | %>
+					<td width="<%=( 100 / td_size - 1 ) %>%">
+						<table border="2" width="100%">
+							<tr>
+								<th width="80%">
+<!--
+									<%=@card[ @sub_lists[ tdidx ] ][:id]%>
+-->									<%=@series[ @card[ @sub_lists[ tdidx ] ][:series] ][ :text ]%>
+								</th>
+								<th>
+									<%=@card[ @sub_lists[ tdidx ] ][:cost]%>
+								</th>
+							</tr>
+							<tr>
+								<td colspan="2" style="text-align: center;">
+<!--
+									<%=@card[ @sub_lists[ tdidx ] ][:name]%>
+-->
+									<%=@card[ @sub_lists[ tdidx ] ][:text]%>
+								</td>
+							</tr>
+						</table>
+					</td>
+				<% end %>
+			</tr>
+		<% end %>
+	</table>
+<% end %>
+<% #********************************************** %>
+
+
+<br/>
+<br/>
+<table border="1">
+	<% @params.each do| k, v | %>
+		<tr>
+			<td><%=k%></td>
+			<td><%=v.to_s%></td>
+		</tr>
+	<% end %>
+		<tr>
+			<td>main_lists</td>
+			<td><%=@main_lists.to_s%></td>
+		</tr>
+		<tr>
+			<td>sub_lists</td>
+			<td><%=@sub_lists.to_s%></td>
+		</tr>
+		<tr>
+			<td>opt_lists</td>
+			<td><%=@opt_lists.to_s%></td>
+		</tr>
+</table>
+<br/>
+<br/>
+
+<pre>
+link_to:
+<%= url_for( :host => Socket::gethostname, :controller => @params[:controller], :action => @params[:action],
+		:mainlist	=> @params[ :mainlist ],
+		:sublist	=> @params[ :sublist ],
+		:optlist	=> @params[ :optlist ],
+		:only_path	=> false
+) %>
+</pre>
