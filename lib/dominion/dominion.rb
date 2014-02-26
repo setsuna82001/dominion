@@ -22,7 +22,7 @@ class DominionLib
 		}
 		
 		sub.each{| key, vol |
-			eval( "#{key}Pcoress( #{vol} )" );
+			eval( "#{key}Process( #{vol} )" );
 		}
 	end
 	
@@ -38,6 +38,7 @@ class DominionLib
 	end
 	
 	def method_missing( name, args = nil )
+		return eachProcess( $1, args ) if name =~ /^(.+?)Process$/
 		return []	if [ :get_relate_supply, :get_deck_supply ].include?( name )
 		return nil
     end
@@ -62,32 +63,15 @@ class DominionLib
 		return id
 	end
 
-	def relatePcoress( list )
-		list.each{| id |
-			if @main_list.key?( id )
-				@relate_list[id] = @main_list[id]
-				deleteMainCard( id )
-			end
-		}
-	end
-	def deckPcoress( list )
-		list.each{| id |
-			if @main_list.key?( id )
-				@deck_list[id] = @main_list[id]
-				deleteMainCard( id )
-			end
-		}
-	end
-	def optionPcoress( list )
-		list.each{| id |
-			if @main_list.key?( id )
-				@option_list[id] = @main_list[id]
-				deleteMainCard( id )
-			end
-		}
-	end
-	def deletePcoress( list )
+	def deleteProcess( list )
 		list.each{| id | deleteMainCard( id ) }
 	end
-	
+	def eachProcess( name, list )
+		list.each{| id |
+			if @main_list.key?( id )
+				eval( "@#{name}_list[ id ] = @main_list[ id ]" )
+				deleteMainCard( id )
+			end
+		}
+	end
 end
