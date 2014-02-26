@@ -22,8 +22,8 @@ $(function(){
 		if ( series.length == 0 ) return;
 		
 		$( 'input[name=mainlist]' ).attr( 'disabled', 'disabled' );
-		$( 'input[name=sublist]'  ).attr( 'disabled', 'disabled' );
-		$( 'input[name=optlist]'  ).attr( 'disabled', 'disabled' );
+//		$( 'input[name=sublist]'  ).attr( 'disabled', 'disabled' );
+//		$( 'input[name=decklist]' ).attr( 'disabled', 'disabled' );
 		$( 'input[name=submit]' ).click();
 	} );
 

@@ -13,8 +13,8 @@ class Prosperity < DominionLib
 	def get_relate_supply( main_list = nil )
 		ret			= Array.new
 		self_list	= main_list.select{| id | @card_list[ id ][ :series ] == @series_num }
-		ret << ColonyNumber		if rand( main_list.size ) > self_list.size
-		ret << PlatinumNumber	if rand( main_list.size ) > self_list.size
+		ret << ColonyNumber		if ( rand( main_list.size ) + 1 ) <= self_list.size
+		ret << PlatinumNumber	if ( rand( main_list.size ) + 1 ) <= self_list.size
 		return ret
 	end
 

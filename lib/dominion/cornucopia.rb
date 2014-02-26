@@ -35,11 +35,14 @@ class Cornucopia < DominionLib
 		return ret
 	end
 	
-	def get_option_supply( main_list = nil )
+	def get_sub_relate_supply( obj = nil )
 		ret			= Array.new
-		if main_list.include?( YoungWitchNumber )
+		series		= obj[ :select_series ].keys
+		if obj[ :main_list ].include?( YoungWitchNumber )
 			ret << @card_list.select{| key, vol |
-				YoungWitchExtractCostRange.include?( vol[:cost].to_i )
+				obj[ :main_list ].include?( key ).!	&&					# non exist in main_list
+				series.include?( vol[:series] )		&&					# selectable series
+				YoungWitchExtractCostRange.include?( vol[:cost].to_i )	# const in range
 			}.to_a.sample[0]
 		end
 		return ret

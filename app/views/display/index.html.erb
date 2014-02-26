@@ -19,10 +19,7 @@
 								<% if @params[:series].include?( series[ tdbase + tdidx ][0] )%>checked<% end %>
 						/>
 						<label for="series_<%=tdbase + tdidx%>">
-<!--
 							<%=series[ tdbase + tdidx ][1][:name]%>
--->
-							<%=series[ tdbase + tdidx ][1][:text]%>
 						</label>
 					</td>
 				<% end %>
@@ -35,8 +32,10 @@
 	<hr />
 	<div style="position: center; text-align: center;">
 		<input type="text"   name="mainlist" value="<%=@params[:mainlist]%>" placeholder="キー入力" autocomplete="off" />
+<!--
 		<input type="hidden" name="sublist"  value="<%=@params[:sublist]%>" />
-		<input type="hidden" name="optlist"  value="<%=@params[:optlist]%>" />
+		<input type="hidden" name="decklist"  value="<%=@params[:decklist]%>" />
+-->
 		<input type="submit" name="submit"  value="送信" />
 		<input type="button" name="newlist" value="新規" />
 		<input type="button" name="allselect" value="全選択" />
@@ -59,9 +58,7 @@
 						<table border="2" width="100%">
 							<tr>
 								<th width="80%">
-<!--
-									<%=@card[ @main_lists[ tdidx ] ][:id]%>
--->									<%=@series[ @card[ @main_lists[ tdidx ] ][:series] ][ :text ]%>
+									<%=@series[ @card[ @main_lists[ tdidx ] ][:series] ][ :name ]%>
 								</th>
 								<th>
 									<%=@card[ @main_lists[ tdidx ] ][:cost]%>
@@ -69,10 +66,7 @@
 							</tr>
 							<tr>
 								<td colspan="2" style="text-align: center;">
-<!--
 									<%=@card[ @main_lists[ tdidx ] ][:name]%>
--->
-									<%=@card[ @main_lists[ tdidx ] ][:text]%>
 								</td>
 							</tr>
 						</table>
@@ -101,9 +95,7 @@
 						<table border="2" width="100%">
 							<tr>
 								<th width="80%">
-<!--
-									<%=@card[ @sub_lists[ tdidx ] ][:id]%>
--->									<%=@series[ @card[ @sub_lists[ tdidx ] ][:series] ][ :text ]%>
+									<%=@series[ @card[ @sub_lists[ tdidx ] ][:series] ][ :name ]%>
 								</th>
 								<th>
 									<%=@card[ @sub_lists[ tdidx ] ][:cost]%>
@@ -111,10 +103,7 @@
 							</tr>
 							<tr>
 								<td colspan="2" style="text-align: center;">
-<!--
 									<%=@card[ @sub_lists[ tdidx ] ][:name]%>
--->
-									<%=@card[ @sub_lists[ tdidx ] ][:text]%>
 								</td>
 							</tr>
 						</table>
@@ -132,21 +121,24 @@
 <table border="1">
 	<% @params.each do| k, v | %>
 		<tr>
-			<td><%=k%></td>
+			<td colspan="2"><%=k%></td>
 			<td><%=v.to_s%></td>
 		</tr>
 	<% end %>
 		<tr>
 			<td>main_lists</td>
+			<td><%=@main_lists.size%></td>
 			<td><%=@main_lists.to_s%></td>
 		</tr>
 		<tr>
 			<td>sub_lists</td>
+			<td><%=@sub_lists.size%></td>
 			<td><%=@sub_lists.to_s%></td>
 		</tr>
 		<tr>
-			<td>opt_lists</td>
-			<td><%=@opt_lists.to_s%></td>
+			<td>deck_lists</td>
+			<td><%=@deck_lists.size%></td>
+			<td><%=@deck_lists.to_s%></td>
 		</tr>
 </table>
 <br/>
@@ -157,7 +149,7 @@ link_to:
 <%= url_for( :host => Socket::gethostname, :controller => @params[:controller], :action => @params[:action],
 		:mainlist	=> @params[ :mainlist ],
 		:sublist	=> @params[ :sublist ],
-		:optlist	=> @params[ :optlist ],
+		:decklist	=> @params[ :decklist ],
 		:only_path	=> false
 ) %>
 </pre>

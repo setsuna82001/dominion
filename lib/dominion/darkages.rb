@@ -44,7 +44,7 @@ class Darkages < DominionLib
 	SpoilsNumber			= 228	#略奪品
 	
 	CardRelations			= {
-		KnightsNumber		=> Knights,
+#		KnightsNumber		=> Knights,
 		DeathCartNumber		=> Ruins,
 		CultistNumber		=> Ruins,
 		MarauderNumber		=> Ruins + [ SpoilsNumber ],
@@ -58,7 +58,7 @@ class Darkages < DominionLib
 		super(	card, series_num,
 				{	:relate => Ruins + [ MadmanNumber, MercenaryNumber, SpoilsNumber ],
 					:delete => Knights,
-					:option => Shelters
+					:deck	=> Shelters
 				}
 		)
 	end
@@ -70,6 +70,17 @@ class Darkages < DominionLib
 				ret += CardRelations[ id ]
 			end
 		}
+		return ret
+	end
+	
+	def get_deck_supply( obj = nil )
+		ret			= Array.new
+		self_list	= obj[ :main_list ].select{| id | @card_list[ id ][ :series ] == @series_num }
+		if self_list.size > 0
+			ret << NecropolisNumber			if ( rand( obj[ :main_list ].size ) + 1 ) < self_list.size
+			ret << OvergrownEstateNumber	if ( rand( obj[ :main_list ].size ) + 1 ) < self_list.size
+			ret << HovelNumber				if ( rand( obj[ :main_list ].size ) + 1 ) < self_list.size
+		end
 		return ret
 	end
 	

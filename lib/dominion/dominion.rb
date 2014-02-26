@@ -2,7 +2,7 @@
 class DominionLib
 	
 	attr_accessor	:series_name, :series_num,
-					:relate_list, :option_list,
+					:relate_list, :deck_list,
 					:main_list,	:sub_list
 	
 	def initialize( card, series_num, sub = {} )
@@ -10,6 +10,7 @@ class DominionLib
 		@series_name	= self.class.to_s
 		@series_num		= series_num
 		@relate_list	= Hash.new
+		@deck_list		= Hash.new
 		@option_list	= Hash.new
 		@main_list		= Hash.new
 		@sub_list		= Hash.new
@@ -37,7 +38,7 @@ class DominionLib
 	end
 	
 	def method_missing( name, args = nil )
-		return []	if [ :get_relate_supply, :get_option_supply ].include?( name )
+		return []	if [ :get_relate_supply, :get_deck_supply ].include?( name )
 		return nil
     end
 	
@@ -65,6 +66,14 @@ class DominionLib
 		list.each{| id |
 			if @main_list.key?( id )
 				@relate_list[id] = @main_list[id]
+				deleteMainCard( id )
+			end
+		}
+	end
+	def deckPcoress( list )
+		list.each{| id |
+			if @main_list.key?( id )
+				@deck_list[id] = @main_list[id]
 				deleteMainCard( id )
 			end
 		}

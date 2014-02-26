@@ -14,7 +14,7 @@ class Alchemy < DominionLib
 		ret			= Array.new
 		self_list	= main_list.select{| id | @card_list[ id ][ :series ] == @series_num }
 		ret << PotionNumber				if self_list.size > 0
-		ret << PhilosophersStoneNumber	if rand( main_list.size ) > self_list.size
+		ret << PhilosophersStoneNumber	if ( rand( main_list.size ) + 1 ) <= self_list.size
 		return ret
 	end
 end
