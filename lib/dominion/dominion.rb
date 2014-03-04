@@ -2,22 +2,22 @@
 class DominionLib
 	
 	attr_accessor	:series_name, :series_num,
-					:relate_list, :deck_list,
-					:main_list,	:sub_list
+					:relatelist, :decklist,
+					:mainlist,	:sublist
 	
 	def initialize( card, series_num, sub = {} )
 		@card_list		= card
 		@series_name	= self.class.to_s
 		@series_num		= series_num
-		@relate_list	= Hash.new
-		@deck_list		= Hash.new
+		@relatelist		= Hash.new
+		@decklist		= Hash.new
 		@option_list	= Hash.new
-		@main_list		= Hash.new
-		@sub_list		= Hash.new
+		@mainlist		= Hash.new
+		@sublist		= Hash.new
 		
 		card.each{| key, vol |
 			if vol[:series] == series_num
-				@main_list[key] = vol
+				@mainlist[key] = vol
 			end
 		}
 		
@@ -27,19 +27,19 @@ class DominionLib
 	end
 	
 	def select_supply( id = nil )
-		id = @main_list.to_a.sample[0] unless id
+		id = @mainlist.to_a.sample[0] unless id
 		deleteMainCard( id )
 		return id
 	end
 	
 	def isMainCard?( id )
-		bln = @main_list.key?( id )
+		bln = @mainlist.key?( id )
 		return ( bln ) ? select_supply( id ) : nil
 	end
 	
 	def method_missing( name, args = nil )
 		return eachProcess( $1, args ) if name =~ /^(.+?)Process$/
-		return []	if [ :get_relate_supply, :get_deck_supply ].include?( name )
+		return []	if [ :get_relate_supply, :get_deck_supply, :get_option_supply ].include?( name )
 		return nil
     end
 	
@@ -59,7 +59,7 @@ class DominionLib
 	
 	protected
 	def deleteMainCard( id )
-		@main_list.delete( id ) if @main_list.key?( id )
+		@mainlist.delete( id ) if @mainlist.key?( id )
 		return id
 	end
 
@@ -68,8 +68,8 @@ class DominionLib
 	end
 	def eachProcess( name, list )
 		list.each{| id |
-			if @main_list.key?( id )
-				eval( "@#{name}_list[ id ] = @main_list[ id ]" )
+			if @mainlist.key?( id )
+				eval( "@#{name}list[ id ] = @mainlist[ id ]" )
 				deleteMainCard( id )
 			end
 		}

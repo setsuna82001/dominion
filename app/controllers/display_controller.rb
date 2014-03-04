@@ -10,8 +10,8 @@ class DisplayController < ApplicationController
 	LIBPATH	= "#{Rails.root}/lib/dominion"
 	
 	# variables
-	@@variables	= [ 'card', 'series', 'type' ]
-	@@symbols	= [ :mainlist, :sublist, :decklist ]
+	@@variables	= [ :card, :series, :type ]
+	@@symbols	= [ :mainlist, :sublist, :decklist, :optionlist ]
 	
 	def initialize
 		load( "#{LIBPATH}/dominion.rb" )
@@ -30,15 +30,15 @@ class DisplayController < ApplicationController
 	
 	def index
 		@params	= checkParams( params )
-		@main_lists		= reservKeyList( @params[ :mainlist ] )
-		@sub_lists		= reservKeyList( @params[ :sublist ] )
-		@deck_lists		= reservKeyList( @params[ :decklist ] )
 		@playable_series	= Array.new
 		@select_series		= Hash.new
+		@@symbols.each{| sym |
+			eval( "@#{ sym } = reservKeyList( @params[ :#{ sym } ] )" )
+		}
 
 		# check each params
 		reservSeries( @params[:series]  )
-		if( @main_lists.empty? && @params[:series].empty? )
+		if( @mainlist.empty? && @params[:series].empty? )
 			# first access judge
 			@@symbols.each{| sym | @params[ sym ] = '' }
 			return nil
@@ -48,23 +48,23 @@ class DisplayController < ApplicationController
 		loadClasses( )				# 各クラスを読み込み
 		makePlaybleCardList( )		# @listsを有効なカードのみに
 		makePlaybleSeriesList(  )	# @listsからシリーズを選定
-		if @main_lists.size > SUPPLY_SIZE
-			makeKeyList( @main_lists[ 0, SUPPLY_SIZE ] )
+		if @mainlist.size > SUPPLY_SIZE
+			makeKeyList( @mainlist[ 0, SUPPLY_SIZE ] )
 			return nil
-		elsif @main_lists.size == SUPPLY_SIZE
-			makeKeyList( @main_lists )
+		elsif @mainlist.size == SUPPLY_SIZE
+			makeKeyList( @mainlist )
 			return nil
 		end
 		
 		# select supply
-		while( @main_lists.size < SUPPLY_SIZE )
+		while( @mainlist.size < SUPPLY_SIZE )
 			@select_series.select{| key, vol | vol == @select_series.values.min }.keys.sample.tap{| num |
-				eval( "@main_lists << @#{@series[num][:text]}.select_supply" )
+				eval( "@mainlist << @#{@series[num][:text]}.select_supply" )
 				@select_series[ num ] += 1
 			}
 		end
 
-		makeKeyList( @main_lists )
+		makeKeyList( @mainlist )
 	end
 	
 	protected
@@ -82,7 +82,7 @@ class DisplayController < ApplicationController
 	
 	def makePlaybleCardList( )
 		sub = []
-		@main_lists.each{| id |
+		@mainlist.each{| id |
 			arr = @playable_series.map{| obj |
 				obj.isMainCard?( id )
 			}.select{| obj | obj.to_i > 0 }
@@ -93,11 +93,11 @@ class DisplayController < ApplicationController
 				@select_series[ @card[ id ][:series] ] += 1
 			end
 		}
-		@main_lists -= sub
+		@mainlist -= sub
 	end
 	
 	def makePlaybleSeriesList( )
-		arr					= @main_lists.map{| num | @card[ num ][:series] }
+		arr					= @mainlist.map{| num | @card[ num ][:series] }
 		@params[:series]	= ( @params[:series] + arr ).uniq
 		
 		@select_series.each{| key, vol |
@@ -121,39 +121,45 @@ class DisplayController < ApplicationController
 	end
 	
 	def makeKeyList( lists )
-		@main_lists = lists.sort
+		@mainlist = lists.sort
 		
 		# select sub supply
-		if ( @sub_lists & GAME_BASE_CARD_LIST ).size != GAME_BASE_CARD_LIST.size
-			@sub_lists = GAME_BASE_CARD_LIST
+		if ( @sublist & GAME_BASE_CARD_LIST ).size != GAME_BASE_CARD_LIST.size
+			@sublist = GAME_BASE_CARD_LIST
 			@playable_series.each{| obj |
-				@sub_lists += obj.get_relate_supply( @main_lists )
+				@sublist += obj.get_relate_supply( @mainlist )
 			}
-			@sub_lists.uniq!
+			@sublist.uniq!
 		end
+		
+		# deck cards extract
+		if @decklist.size != DECK_SIZE
+			@playable_series.each{| obj |
+				@decklist += obj.get_deck_supply( @mainlist )
+			}
 
-		# TODO 災い
+			@decklist.uniq!
+			if @decklist.uniq.size < DECK_SIZE
+				( DECK_SIZE - @decklist.size ).times{
+					@decklist << ADD_DECK_BASE_CARD
+				}
+			end
+			@decklist = @decklist[ 0, DECK_SIZE ].sort
+		end
 		
 		# option cards extract
-		if @deck_lists.size.zero?
+		if @optionlist.size.zero?
 			@playable_series.each{| obj |
-				@deck_lists += obj.get_deck_supply( {
-						main_list:		@main_lists,
+				@optionlist += obj.get_option_supply( {
+						mainlist:		@mainlist,
 						select_series:	@select_series,
 				} )
 			}
-
-			@deck_lists.uniq!
-			if @deck_lists.uniq.size < DECK_SIZE
-				( DECK_SIZE - @deck_lists.size ).times{
-					@deck_lists << ADD_DECK_BASE_CARD
-				}
-			end
-			@deck_lists = @deck_lists[ 0, DECK_SIZE ].sort
 		end
+		
 
 		@@symbols.each{| sym |
-			eval( "@params[:#{sym}] = @#{ sym.to_s.sub( 'list', '_lists' ) }.inject(''){| str, num | str += ( \"%02x\" % num ) }" )
+			eval( "@params[:#{sym}] = @#{ sym }.inject(''){| str, num | str += ( \"%02x\" % num ) }" )
 		}
 		
 	end

@@ -63,9 +63,9 @@ class Darkages < DominionLib
 		)
 	end
 	
-	def get_relate_supply( main_list = nil )
+	def get_relate_supply( mainlist = nil )
 		ret			= Array.new
-		main_list.each{| id |
+		mainlist.each{| id |
 			unless CardRelations[ id ].nil?
 				ret += CardRelations[ id ]
 			end
@@ -73,13 +73,13 @@ class Darkages < DominionLib
 		return ret
 	end
 	
-	def get_deck_supply( obj = nil )
+	def get_deck_supply( mainlist = nil )
 		ret			= Array.new
-		self_list	= obj[ :main_list ].select{| id | @card_list[ id ][ :series ] == @series_num }
+		self_list	= mainlist.select{| id | @card_list[ id ][ :series ] == @series_num }
 		if self_list.size > 0
-			ret << NecropolisNumber			if ( rand( obj[ :main_list ].size ) + 1 ) < self_list.size
-			ret << OvergrownEstateNumber	if ( rand( obj[ :main_list ].size ) + 1 ) < self_list.size
-			ret << HovelNumber				if ( rand( obj[ :main_list ].size ) + 1 ) < self_list.size
+			ret << NecropolisNumber			if ( rand( mainlist.size ) + 1 ) < self_list.size
+			ret << OvergrownEstateNumber	if ( rand( mainlist.size ) + 1 ) < self_list.size
+			ret << HovelNumber				if ( rand( mainlist.size ) + 1 ) < self_list.size
 		end
 		return ret
 	end

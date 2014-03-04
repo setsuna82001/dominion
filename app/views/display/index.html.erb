@@ -46,30 +46,16 @@
 
 
 <% #*********************** main *********************** %>
-<% unless @main_lists.empty? %>
+<% unless @mainlist.empty? %>
 	<table border="1" width="100%" align="center">
 		<% tr_size	= 2 #行数 %>
-		<% td_size	= @main_lists.size / tr_size %>
+		<% td_size	= @mainlist.size / tr_size %>
 		<% tr_size.times do | tridx | %>		
 			<tr>
 				<% tdbase = td_size * tridx %>
 				<% ( ( 0 + tdbase )..( td_size - 1 + tdbase ) ).each do | tdidx | %>
 					<td width="<%=( 100 / td_size - 1 ) %>%">
-						<table border="2" width="100%">
-							<tr>
-								<th width="80%">
-									<%=@series[ @card[ @main_lists[ tdidx ] ][:series] ][ :name ]%>
-								</th>
-								<th>
-									<%=@card[ @main_lists[ tdidx ] ][:cost]%>
-								</th>
-							</tr>
-							<tr>
-								<td colspan="2" style="text-align: center;">
-									<%=@card[ @main_lists[ tdidx ] ][:name]%>
-								</td>
-							</tr>
-						</table>
+						<%=make_card_table( @mainlist[ tdidx ] )%>
 					</td>
 				<% end %>
 			</tr>
@@ -83,30 +69,18 @@
 
 
 <% #*********************** sub *********************** %>
-<% unless @sub_lists.empty? %>
+<% unless @sublist.empty? %>
 	<table border="1" width="100%" align="center">
-		<% tr_size	= 2 #行数 %>
-		<% td_size	= @sub_lists.size / tr_size %>
+		<% td_size	= 7 #列数 %>
+		<% tr_size	= ( @sublist.size / td_size.to_f ).ceil  %>
 		<% tr_size.times do | tridx | %>		
 			<tr>
 				<% tdbase = td_size * tridx %>
 				<% ( ( 0 + tdbase )..( td_size - 1 + tdbase ) ).each do | tdidx | %>
 					<td width="<%=( 100 / td_size - 1 ) %>%">
-						<table border="2" width="100%">
-							<tr>
-								<th width="80%">
-									<%=@series[ @card[ @sub_lists[ tdidx ] ][:series] ][ :name ]%>
-								</th>
-								<th>
-									<%=@card[ @sub_lists[ tdidx ] ][:cost]%>
-								</th>
-							</tr>
-							<tr>
-								<td colspan="2" style="text-align: center;">
-									<%=@card[ @sub_lists[ tdidx ] ][:name]%>
-								</td>
-							</tr>
-						</table>
+						<% unless @sublist[ tdidx ].nil? %>
+							<%=make_card_table( @sublist[ tdidx ] )%>
+						<% end %>
 					</td>
 				<% end %>
 			</tr>
@@ -118,6 +92,28 @@
 
 <br/>
 <br/>
+
+<% #*********************** deck *********************** %>
+<% unless @decklist.empty? %>
+	<table border="1" width="50%" align="center">	
+		<tr>
+			<% @decklist.each do | obj | %>
+				<td width="33%">
+					<%=make_card_table( obj )%>
+				</td>
+			<% end %>
+		</tr>
+	</table>
+<% end %>
+<% #********************************************** %>
+
+
+
+<br/>
+<br/>
+
+
+
 <table border="1">
 	<% @params.each do| k, v | %>
 		<tr>
@@ -126,19 +122,24 @@
 		</tr>
 	<% end %>
 		<tr>
-			<td>main_lists</td>
-			<td><%=@main_lists.size%></td>
-			<td><%=@main_lists.to_s%></td>
+			<td>mainlist</td>
+			<td><%=@mainlist.size%></td>
+			<td><%=@mainlist.to_s%></td>
 		</tr>
 		<tr>
-			<td>sub_lists</td>
-			<td><%=@sub_lists.size%></td>
-			<td><%=@sub_lists.to_s%></td>
+			<td>sublist</td>
+			<td><%=@sublist.size%></td>
+			<td><%=@sublist.to_s%></td>
 		</tr>
 		<tr>
-			<td>deck_lists</td>
-			<td><%=@deck_lists.size%></td>
-			<td><%=@deck_lists.to_s%></td>
+			<td>decklist</td>
+			<td><%=@decklist.size%></td>
+			<td><%=@decklist.to_s%></td>
+		</tr>
+		<tr>
+			<td>optionlist</td>
+			<td><%=@optionlist.size%></td>
+			<td><%=@optionlist.to_s%></td>
 		</tr>
 </table>
 <br/>
@@ -150,6 +151,9 @@ link_to:
 		:mainlist	=> @params[ :mainlist ],
 		:sublist	=> @params[ :sublist ],
 		:decklist	=> @params[ :decklist ],
+		:optionlist	=> @params[ :optionlist ],
 		:only_path	=> false
 ) %>
 </pre>
+
+?decklist=040404&mainlist=09182b4c5a898b9bc0ed&sublist=0102030405060761588283848f90aecfd3d6d7

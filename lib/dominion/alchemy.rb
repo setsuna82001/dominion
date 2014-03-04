@@ -10,11 +10,11 @@ class Alchemy < DominionLib
 		)
 	end
 	
-	def get_relate_supply( main_list = nil )
+	def get_relate_supply( mainlist = nil )
 		ret			= Array.new
-		self_list	= main_list.select{| id | @card_list[ id ][ :series ] == @series_num }
+		self_list	= mainlist.select{| id | @card_list[ id ][ :series ] == @series_num }
 		ret << PotionNumber				if self_list.size > 0
-		ret << PhilosophersStoneNumber	if ( rand( main_list.size ) + 1 ) <= self_list.size
+		ret << PhilosophersStoneNumber	if ( rand( mainlist.size ) + 1 ) <= self_list.size
 		return ret
 	end
 end
