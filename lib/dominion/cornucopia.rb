@@ -39,11 +39,12 @@ class Cornucopia < DominionLib
 		ret			= Array.new
 		series		= obj[ :select_series ].keys
 		if obj[ :mainlist ].include?( YoungWitchNumber )
-			ret << @card_list.select{| key, vol |
+			select	= @card_list.select{| key, vol |
 				obj[ :mainlist ].include?( key ).!	&&					# non exist in mainlist
 				series.include?( vol[:series] )		&&					# selectable series
 				YoungWitchExtractCostRange.include?( vol[:cost].to_i )	# const in range
-			}.to_a.sample[0]
+			}
+			ret << select.to_a.sample[0] unless select.empty?
 		end
 		return ret
 	end

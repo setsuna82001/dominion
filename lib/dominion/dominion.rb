@@ -11,7 +11,7 @@ class DominionLib
 		@series_num		= series_num
 		@relatelist		= Hash.new
 		@decklist		= Hash.new
-		@option_list	= Hash.new
+		@optionlist		= Hash.new
 		@mainlist		= Hash.new
 		@sublist		= Hash.new
 		

@@ -19,7 +19,7 @@
 								<% if @params[:series].include?( series[ tdbase + tdidx ][0] )%>checked<% end %>
 						/>
 						<label for="series_<%=tdbase + tdidx%>">
-							<%=series[ tdbase + tdidx ][1][:name]%>
+							<b><%=series[ tdbase + tdidx ][1][:name]%></b>
 						</label>
 					</td>
 				<% end %>
@@ -31,11 +31,9 @@
 	<br />
 	<hr />
 	<div style="position: center; text-align: center;">
+
 		<input type="text"   name="mainlist" value="<%=@params[:mainlist]%>" placeholder="キー入力" autocomplete="off" />
-<!--
-		<input type="hidden" name="sublist"  value="<%=@params[:sublist]%>" />
-		<input type="hidden" name="decklist"  value="<%=@params[:decklist]%>" />
--->
+
 		<input type="submit" name="submit"  value="送信" />
 		<input type="button" name="newlist" value="新規" />
 		<input type="button" name="allselect" value="全選択" />
@@ -71,15 +69,16 @@
 <% #*********************** sub *********************** %>
 <% unless @sublist.empty? %>
 	<table border="1" width="100%" align="center">
+		<% sublist	= @sublist + @optionlist %>
 		<% td_size	= 7 #列数 %>
-		<% tr_size	= ( @sublist.size / td_size.to_f ).ceil  %>
+		<% tr_size	= ( sublist.size / td_size.to_f ).ceil  %>
 		<% tr_size.times do | tridx | %>		
 			<tr>
 				<% tdbase = td_size * tridx %>
 				<% ( ( 0 + tdbase )..( td_size - 1 + tdbase ) ).each do | tdidx | %>
 					<td width="<%=( 100 / td_size - 1 ) %>%">
-						<% unless @sublist[ tdidx ].nil? %>
-							<%=make_card_table( @sublist[ tdidx ] )%>
+						<% unless sublist[ tdidx ].nil? %>
+							<%=make_card_table( sublist[ tdidx ] )%>
 						<% end %>
 					</td>
 				<% end %>
@@ -88,7 +87,6 @@
 	</table>
 <% end %>
 <% #********************************************** %>
-
 
 <br/>
 <br/>
