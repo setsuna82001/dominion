@@ -71,7 +71,7 @@ class DisplayController < ApplicationController
 	def loadClasses( )
 		@series.each{| key, vol |
 			text = vol[:text]
-			unless text.empty?
+			if vol[:playable]
 				load( "#{LIBPATH}/#{text.downcase}.rb" )
 				eval( "@#{text} = #{text}.new( @card, key )" )
 				eval( "@playable_series << @#{text}" )
@@ -116,7 +116,7 @@ class DisplayController < ApplicationController
 	def reservSeries( args )
 		@params[ :series ] = args.map{| str |
 			num = str.to_i
-			( @series[num][:text].empty? )? nil : num
+			( @series[num][:playable] )? num : nil
 		}.compact
 	end
 	
@@ -157,7 +157,6 @@ class DisplayController < ApplicationController
 			}
 		end
 		
-
 		@@symbols.each{| sym |
 			eval( "@params[:#{sym}] = @#{ sym }.inject(''){| str, num | str += ( \"%02x\" % num ) }" )
 		}

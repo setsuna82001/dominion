@@ -1,7 +1,7 @@
 module DisplayHelper
 	def make_card_table id = nil
 		<<-"HTML".html_safe
-			<table border="2" width="100%">
+			<table border="2" width="100%" class="#{ @series[ @card[ id ][ :series ] ][ :text ] }">
 				<tr>
 					<th width="80%">
 						#{ @series[ @card[ id ][ :series ] ][ :name ] }

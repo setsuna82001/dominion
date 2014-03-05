@@ -12,7 +12,7 @@
 			<tr>
 				<% tdbase = td_size * tridx %>
 				<% td_size.times do | tdidx | %>
-					<td width="<%=( 100 / td_size - 1 ) %>%">
+					<td width="<%=( 100 / td_size - 1 ) %>%" class="<%=series[ tdbase + tdidx ][1][:text]%>">
 						<input	type="checkbox" name="series[]"
 								id="series_<%=tdbase + tdidx%>"
 								value="<%=series[ tdbase + tdidx ][0]%>"
