@@ -1,4 +1,4 @@
 class NoticeController < ApplicationController
-	def send
-	end
+  def send
+  end
 end
