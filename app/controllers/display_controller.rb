@@ -45,9 +45,9 @@ class DisplayController < ApplicationController
     end
 
     # check params
-    loadClasses( )        # 各クラスを読み込み
+    loadClasses( )            # 各クラスを読み込み
     makePlaybleCardList( )    # @listsを有効なカードのみに
-    makePlaybleSeriesList(  )  # @listsからシリーズを選定
+    makePlaybleSeriesList(  ) # @listsからシリーズを選定
     if @mainlist.size > SUPPLY_SIZE
       makeKeyList( @mainlist[ 0, SUPPLY_SIZE ] )
       return nil
@@ -149,10 +149,12 @@ class DisplayController < ApplicationController
     
     # option cards extract
     if @optionlist.size.zero?
+      selectable_mainlist = @playable_series.inject({}){| hsh, obj | hsh.merge!( obj.mainlist ) }
       @playable_series.each{| obj |
         @optionlist += obj.get_option_supply( {
             mainlist:       @mainlist,
             select_series:  @select_series,
+            card_list:      selectable_mainlist
         } )
       }
     end

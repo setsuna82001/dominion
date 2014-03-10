@@ -1,30 +1,55 @@
 $(function(){
 //================================================================
-	$('input[name=allselect]').click( function() {
+	
+	function eachSeriesCheck( bln ){
 		$.each( $('input[type=checkbox]'), function() {
 			if( !( /^series_\d$/.test( this.id ) ) ) return;
-			// select
-			$( this ).attr( 'checked', true );
+			$( this ).prop({'checked':bln});
 		});
+	}
+	
+	$('#btn_allselect').click( function() {
+		eachSeriesCheck( true );
+	});
+	
+	$('#btn_allclear').click( function() {
+		eachSeriesCheck( false );
 	});
 
 //================================================================
+	
+	function listDisabling( list ){
+		$.each( list, function( id, val ) {
+			$( '#' + val ).attr( 'disabled', true );
+		});
+	}
+	
 
-	$('input[name=newlist]').click( function() {
+	$('#extract').click( function() {
 		
 		// checked series count
-		series = new Array();
+		series_count = 0;
 		$.each( $('input[type=checkbox]'), function() {
 			if( !( /^series_\d$/.test( this.id ) ) ) return;
 			// select
 			if( $( this ).is( ':checked' ) ){
-				series.push( this.value );
+				series_count++;
 			}
 		});
-		if ( series.length == 0 ) return;
+
+		if ( series_count == 0 || $('#mainlist').length == 0 ) return;
 		
-		$( 'input[name=mainlist]' ).attr( 'disabled', 'disabled' );
-		$( 'input[name=submit]' ).click();
+		switch( $('#extract_type option:selected').val() ){
+			case 'type_main'	: listDisabling( [ 'mainlist', 'sublist', 'decklist', 'optlist' ] ); break;
+			case 'type_sub'		: listDisabling( [ 'sublist' ]  ); break;
+			case 'type_deck'	: listDisabling( [ 'decklist' ] ); break;
+			case 'type_opt'		: listDisabling( [ 'optlist' ]  ); break;
+
+			case 'type_suball'	: listDisabling( [ 'sublist', 'decklist', 'optlist' ] ); break;
+			case 'type_subopt'	: listDisabling( [ 'sublist', 'optlist' ] ); break;
+		}
+		
+		$('#form').submit();
 	} );
 
 //================================================================

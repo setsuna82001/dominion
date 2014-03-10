@@ -1,8 +1,17 @@
-<h1>Display#index</h1>
-<p>Find me in app/views/display/index.html.erb</p>
+<%= form_tag( "/#{@params[:controller]}/#{@params[:action]}", :id => :form ) do %>
+	
+	<hr />
+	<div style="position: center; text-align: center;">
 
-<%= form_tag( "/#{@params[:controller]}/#{@params[:action]}" ) do %>
-
+		<input type="button" id="btn_allselect" value="全選択" />
+		<input type="button" id="btn_allclear"  value="全解除" />
+		
+	</div>
+	<hr />
+	<br />
+	<br />
+	
+	
 	<% #*********************** series select( check ) box *********************** %>
 	<table border="1" width="70%" align="center">
 		<% tr_size	= 2 #行数 %>
@@ -13,9 +22,10 @@
 				<% tdbase = td_size * tridx %>
 				<% td_size.times do | tdidx | %>
 					<td width="<%=( 100 / td_size - 1 ) %>%" class="<%=series[ tdbase + tdidx ][1][:text]%>">
-						<input	type="checkbox" name="series[]"
-								id="series_<%=tdbase + tdidx%>"
-								value="<%=series[ tdbase + tdidx ][0]%>"
+						<input	type  = "checkbox"
+								name  = "series[]"
+								id    = "series_<%=tdbase + tdidx%>"
+								value = "<%=series[ tdbase + tdidx ][0]%>"
 								<% if @params[:series].include?( series[ tdbase + tdidx ][0] )%>checked<% end %>
 						/>
 						<label for="series_<%=tdbase + tdidx%>">
@@ -31,15 +41,32 @@
 	<br />
 	<hr />
 	<div style="position: center; text-align: center;">
+		<% is_empty_main = @params[:mainlist].empty? %>
+		<select name="extract_type" id="extract_type">
+			<option value="type_main"   <% if @params[ :extract_type ] == "type_main"   %>   selected <% end %>>全サプライ</option>
+			<% unless is_empty_main %>
+				<option value="type_suball" <% if @params[ :extract_type ] == "type_suball" %> selected <% end %>>メインサプライ以外</option>
+				<option value="type_sub"    <% if @params[ :extract_type ] == "type_sub"    %> selected <% end %>>サブサプライのみ</option>
+				<% unless @playable_series.select{ | obj | obj.series_name == "Darkages" }.empty? %>
+					<option value="type_deck" <% if @params[ :extract_type ] == "type_deck" %> selected <% end %>>デッキのみ</option>
+				<% end %>
+				<% if @mainlist.include?( Cornucopia::YoungWitchNumber ) %>
+					<option value="type_opt"    <% if @params[ :extract_type ] == "type_opt"    %> selected <% end %>>災いのみ</option>
+					<option value="type_subopt" <% if @params[ :extract_type ] == "type_subopt" %> selected <% end %>>サブサプライ, 災い</option>
+				<% end %>
+			<% end %>
+		</select>
 
-		<input type="text"   name="mainlist" value="<%=@params[:mainlist]%>" placeholder="キー入力" autocomplete="off" />
-
-		<input type="submit" name="submit"  value="送信" />
-		<input type="button" name="newlist" value="新規" />
-		<input type="button" name="allselect" value="全選択" />
+		<input type="button" id="extract" value="<% unless is_empty_main %>再<% end %>抽出" />
 	</div>
+
 	<hr />
 	<br />
+	
+		<input type="hidden" name="mainlist" id="mainlist" value="<%=@params[:mainlist]%>" />
+		<input type="hidden" name="sublist"  id="sublist"  value="<%=@params[:sublist]%>"  />
+		<input type="hidden" name="decklist" id="decklist" value="<%=@params[:decklist]%>" />
+		<input type="hidden" name="optlist"  id="optlist"  value="<%=@params[:optlist]%>"  />
 <% end %>
 
 
