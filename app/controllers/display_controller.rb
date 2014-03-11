@@ -10,7 +10,7 @@ class DisplayController < ApplicationController
   LIBPATH   = "#{Rails.root}/lib/dominion"
   
   # variables
-  @@variables = [ :card, :series, :type ]
+  @@variables = [ :card, :series, :type, :genre ]
   @@symbols   = [ :mainlist, :sublist, :decklist, :optionlist ]
   
   def initialize
