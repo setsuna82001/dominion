@@ -10,9 +10,14 @@ module DisplayHelper
 						#{ @card[ id ][ :cost ] }
 					</th>
 				</tr>
-				<tr>
+        <tr class="#{ @genre[ @card[ id ][ :genre ] ][:text] }">
+          <td colspan="2" style="text-align: center; font-size: x-small;">
+            #{ @genre[ @card[ id ][ :genre ] ][:name] }
+          </td>
+        </tr>
+				<tr class="#{ @genre[ @card[ id ][ :genre ] ][:text] }">
 					<td colspan="2" style="text-align: center;">
-						#{ @card[ id ][ :name ] }
+						<b>#{ @card[ id ][ :name ] }</b>
 					</td>
 				</tr>
 			</table>

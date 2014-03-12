@@ -43,7 +43,7 @@
 	<div style="position: center; text-align: center;">
 		<% is_empty_main = @params[:mainlist].empty? %>
 		<select name="extract_type" id="extract_type">
-			<option value="type_main"   <% if @params[ :extract_type ] == "type_main"   %>   selected <% end %>>全サプライ</option>
+			<option value="type_main"   <% if @params[ :extract_type ] == "type_main"   %>   selected <% end %>>サプライ</option>
 			<% unless is_empty_main %>
 				<option value="type_suball" <% if @params[ :extract_type ] == "type_suball" %> selected <% end %>>メインサプライ以外</option>
 				<option value="type_sub"    <% if @params[ :extract_type ] == "type_sub"    %> selected <% end %>>サブサプライのみ</option>
@@ -97,7 +97,7 @@
 <% unless @sublist.empty? %>
 	<table border="1" width="100%" align="center">
 		<% sublist	= @sublist + @optionlist %>
-		<% td_size	= 7 #列数 %>
+		<% td_size	= 6 #列数 %>
 		<% tr_size	= ( sublist.size / td_size.to_f ).ceil  %>
 		<% tr_size.times do | tridx | %>		
 			<tr>
@@ -134,39 +134,6 @@
 
 
 
-<br/>
-<br/>
-
-
-
-<table border="1">
-	<% @params.each do| k, v | %>
-		<tr>
-			<td colspan="2"><%=k%></td>
-			<td><%=v.to_s%></td>
-		</tr>
-	<% end %>
-		<tr>
-			<td>mainlist</td>
-			<td><%=@mainlist.size%></td>
-			<td><%=@mainlist.to_s%></td>
-		</tr>
-		<tr>
-			<td>sublist</td>
-			<td><%=@sublist.size%></td>
-			<td><%=@sublist.to_s%></td>
-		</tr>
-		<tr>
-			<td>decklist</td>
-			<td><%=@decklist.size%></td>
-			<td><%=@decklist.to_s%></td>
-		</tr>
-		<tr>
-			<td>optionlist</td>
-			<td><%=@optionlist.size%></td>
-			<td><%=@optionlist.to_s%></td>
-		</tr>
-</table>
 <br/>
 <br/>
 

@@ -1,44 +1,116 @@
-// Place all the styles related to the display controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Series Classes
+.Base		{ background-color: rgb( 213, 213, 255 ); }
+.Intrigue	{ background-color: rgb( 255, 213, 213 ); }
+.SeaSide	{ background-color: rgb( 213, 241, 255 ); }
+.Alchemy	{ background-color: rgb( 234, 213, 255 ); }
+.Prosperity	{ background-color: rgb( 255, 234, 123 ); }
+.Cornucopia	{ background-color: rgb( 234, 189, 104 ); }
+.Darkages	{ background-color: rgb( 199, 163, 141 ); }
+.Guild		{ background-color: rgb( 252, 216, 248 ); }
+.StrangeLand{ background-color: rgb( 200, 223, 159 ); }
+.Promotion	{ background-color: rgb( 233, 233, 233 ); }
 
+// Series Classes
 
-.Base{
-	background-color: rgb( 213, 213, 255 );
+$Treasure:		rgb( 237, 231,   2 );
+$Point:			rgb( 109, 235,   5 );
+$Curse:			rgb( 177,   4, 205 );
+$Attack:		rgb( 255,  31,  33 );
+$Action:		rgb( 233, 233, 233 );
+$Reaction:		rgb(   5, 139, 255 );
+$Hold:			rgb( 255, 183,  26 );
+
+$Decoration:	rgb( 196, 147,  23 );
+$Ruin:			rgb( 189,  85,   0 );
+$Knight:		rgb( 119,  47, 162 );
+$Shelter:		rgb(  19, 221, 183 );
+$Plunderer:		rgb( 223,  55,  48 );
+
+.Treasure{
+	background: -moz-linear-gradient( top left, $Treasure 0%, $Treasure 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Treasure ), to( $Treasure ) );
 }
-
-.Intrigue{
-	background-color: rgb( 255, 213, 213 );
+.TreasurePoint{
+	background: -moz-linear-gradient( top left, $Treasure 0%, $Point 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Treasure ), to( $Point ) );
 }
-
-.SeaSide{
-	background-color: rgb( 213, 241, 255 );
+.TreasureDecoration{
+	background: -moz-linear-gradient( top left, $Treasure 0%, $Decoration 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Treasure ), to( $Decoration ) );
 }
-
-.Alchemy{
-	background-color: rgb( 234, 213, 255 );
+.TreasureReaction{
+	background: -moz-linear-gradient( top left, $Treasure 0%, $Reaction 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Treasure ), to( $Reaction ) );
 }
-
-.Prosperity{
-	background-color: rgb( 255, 234, 123 );
+.Point{
+	background: -moz-linear-gradient( top left, $Point 0%, $Point 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Point ), to( $Point ) );
 }
-
-.Cornucopia{
-	background-color: rgb( 234, 189, 104 );
+.PointReaction{
+	background: -moz-linear-gradient( top left, $Point 0%, $Reaction 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Point ), to( $Reaction ) );
 }
-
-.Darkages{
-	background-color: rgb( 199, 163, 141 );
+.PointShelter{
+	background: -moz-linear-gradient( top left, $Point 0%, $Shelter 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Point ), to( $Shelter ) );
 }
-
-.Guild{
-	background-color: rgb( 252, 216, 248 );
+.Curse{
+	background: -moz-linear-gradient( top left, $Curse 0%, $Curse 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Curse ), to( $Curse ) );
 }
-
-.StrangeLand{
-	background-color: rgb( 200, 223, 159 );
+.Action{
+	background: -moz-linear-gradient( top left, $Action 0%, $Action 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Action ), to( $Action ) );
 }
-
-.Promotion{
-	background-color: rgb( 233, 233, 233 );
+.ActionAttack{
+	background: -moz-linear-gradient( top left, $Action 0%, $Attack 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Action ), to( $Attack ) );
+}
+.ActionReaction{
+	background: -moz-linear-gradient( top left, $Action 0%, $Reaction 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Action ), to( $Reaction ) );
+}
+.ActionPoint{
+	background: -moz-linear-gradient( top left, $Action 0%, $Point 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Action ), to( $Point ) );
+}
+.ActionHold{
+	background: -moz-linear-gradient( top left, $Action 0%, $Hold 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Action ), to( $Hold ) );
+}
+.ActionDecoration{
+	background: -moz-linear-gradient( top left, $Action 0%, $Decoration 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Action ), to( $Decoration ) );
+}
+.ActionAttackDecoration{
+	background: -moz-linear-gradient( top left, $Action 0%, $Decoration 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Action ), to( $Decoration ) );
+}
+.ActionRuin{
+	background: -moz-linear-gradient( top left, $Action 0%, $Ruin 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Action ), to( $Ruin ) );
+}
+.ActionAttackKnight{
+	background: -moz-linear-gradient( top left, $Action 0%, $Knight 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Action ), to( $Knight ) );
+}
+.ActionAttackKnightPoint{
+	background: -moz-linear-gradient( top left, $Action 0%, $Knight 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Action ), to( $Knight ) );
+}
+.ActionPlunderer{
+	background: -moz-linear-gradient( top left, $Action 0%, $Plunderer 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Action ), to( $Plunderer ) );
+}
+.ActionShelter{
+	background: -moz-linear-gradient( top left, $Action 0%, $Shelter 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Action ), to( $Shelter ) );
+}
+.ReactionPlunderer{
+	background: -moz-linear-gradient( top left, $Reaction 0%, $Plunderer 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Reaction ), to( $Plunderer ) );
+}
+.ReactionShelter{
+	background: -moz-linear-gradient( top left, $Reaction 0%, $Shelter 100% );
+	background: -webkit-gradient( linear, left top, right bottom, from( $Reaction ), to( $Shelter ) );
 }
