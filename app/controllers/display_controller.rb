@@ -5,7 +5,7 @@ class DisplayController < ApplicationController
   SUPPLY_SIZE         = 10  # サプライのサイズ
   DECK_SIZE           = 3   # 初期デッキ数
   ADD_DECK_BASE_CARD  = 4   # 屋敷
-  GAME_BASE_CARD_LIST = ( 1 .. 7 ).to_a
+  GAME_BASE_CARD_LIST = [ * 1 .. 7 ]
   LISTPATH  = "#{Rails.root}/config/dominion_list"
   LIBPATH   = "#{Rails.root}/lib/dominion"
   
