@@ -1,5 +1,6 @@
 require 'base64'
 require 'ipaddr'
+require 'yaml'
 class DisplayController < ApplicationController
   #const
   SUPPLY_SIZE         = 10  # サプライのサイズ
@@ -14,17 +15,13 @@ class DisplayController < ApplicationController
   @@symbols   = [ :mainlist, :sublist, :decklist, :optionlist ]
   
   def initialize
+    # load series parent
     load( "#{LIBPATH}/dominion.rb" )
+    # load yaml
     @@variables.each{| name |
-      load( "#{LISTPATH}/#{name}.rb" )
-      
-      begin
-        eval( "@#{name} = #{name.capitalize}::List" )
-      rescue
-        eval( "@#{name} = Array.new" )
-      end
+      eval( "@#{name} = YAML.load_file( '#{LISTPATH}/#{name}.yml' )" )
     }
-
+    
     super
   end
   

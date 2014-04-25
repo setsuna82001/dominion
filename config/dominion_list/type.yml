@@ -1,0 +1,14 @@
+1:
+  :name: !str 基本
+2:
+  :name: !str 呪い
+3:
+  :name: !str 王国
+4:
+  :name: !str 褒賞
+5:
+  :name: !str 廃墟
+6:
+  :name: !str 避難所
+7:
+  :name: !str その他

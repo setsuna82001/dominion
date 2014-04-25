@@ -1,0 +1,66 @@
+1:
+  :text:   !str 財宝
+  :name:   !str Treasure
+2:
+  :text:   !str 財宝－勝利点
+  :name:   !str TreasurePoint
+3:
+  :text:   !str 財宝－褒賞
+  :name:   !str TreasureDecoration
+4:
+  :text:   !str 財宝－リアクション
+  :name:   !str TreasureReaction
+5:
+  :text:   !str 勝利点
+  :name:   !str Point
+6:
+  :text:   !str 勝利点－リアクション
+  :name:   !str PointReaction
+7:
+  :text:   !str 勝利点－避難所
+  :name:   !str PointShelter
+8:
+  :text:   !str 呪い
+  :name:   !str Curse
+9:
+  :text:   !str アクション
+  :name:   !str Action
+10:
+  :text:   !str アクション－アタック
+  :name:   !str ActionAttack
+11:
+  :text:   !str アクション－リアクション
+  :name:   !str ActionReaction
+12:
+  :text:   !str アクション－勝利点
+  :name:   !str ActionPoint
+13:
+  :text:   !str アクション－持続
+  :name:   !str ActionHold
+14:
+  :text:   !str アクション－褒賞
+  :name:   !str ActionDecoration
+15:
+  :text:   !str アクション－アタック－褒賞
+  :name:   !str ActionAttackDecoration
+16:
+  :text:   !str アクション－廃墟
+  :name:   !str ActionRuin
+17:
+  :text:   !str アクション－アタック－騎士
+  :name:   !str ActionAttackKnight
+18:
+  :text:   !str アクション－アタック－騎士－勝利点
+  :name:   !str ActionAttackKnightPoint
+19:
+  :text:   !str アクション－アタック－略奪者
+  :name:   !str ActionPlunderer
+20:
+  :text:   !str アクション－避難所
+  :name:   !str ActionShelter
+21:
+  :text:   !str アクション－略奪者
+  :name:   !str ReactionPlunderer
+22:
+  :text:   !str リアクション－避難所
+  :name:   !str ReactionShelter

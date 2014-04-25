@@ -1,0 +1,40 @@
+1:
+  :playable: Yes
+  :name:     !str 基本
+  :text:     !str Base
+2:
+  :playable: Yes
+  :name:     !str 陰謀
+  :text:     !str Intrigue
+3:
+  :playable: Yes
+  :name:     !str 海辺
+  :text:     !str SeaSide
+4:
+  :playable: Yes
+  :name:     !str 錬金術
+  :text:     !str Alchemy
+5:
+  :playable: Yes
+  :name:     !str 繁栄
+  :text:     !str Prosperity
+6:
+  :playable: Yes
+  :name:     !str 収穫祭
+  :text:     !str Cornucopia
+7:
+  :playable: Yes
+  :name:     !str 暗黒時代
+  :text:     !str Darkages
+8:
+  :playable: Yes
+  :name:     !str ギルド
+  :text:     !str Guild
+9:
+  :playable: Yes
+  :name:     !str 異郷
+  :text:     !str StrangeLand
+10:
+  :playable: Yes
+  :name:     !str プロモ
+  :text:     !str Promotion

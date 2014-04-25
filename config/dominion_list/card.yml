@@ -1,0 +1,1687 @@
+1:
+  :series: 1
+  :type:   1
+  :genre:  1
+  :cost:   '0'
+  :text:   !str Copper
+  :name:   !str 銅貨
+2:
+  :series: 1
+  :type:   1
+  :genre:  1
+  :cost:   '3'
+  :text:   !str Silver
+  :name:   !str 銀貨
+3:
+  :series: 1
+  :type:   1
+  :genre:  1
+  :cost:   '6'
+  :text:   !str Gold
+  :name:   !str 金貨
+4:
+  :series: 1
+  :type:   1
+  :genre:  5
+  :cost:   '2'
+  :text:   !str Estate
+  :name:   !str 屋敷
+5:
+  :series: 1
+  :type:   1
+  :genre:  5
+  :cost:   '5'
+  :text:   !str Duchy
+  :name:   !str 公領
+6:
+  :series: 1
+  :type:   1
+  :genre:  5
+  :cost:   '8'
+  :text:   !str Province
+  :name:   !str 属州
+7:
+  :series: 1
+  :type:   2
+  :genre:  8
+  :cost:   '0'
+  :text:   !str Curse
+  :name:   !str 呪い
+8:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Market
+  :name:   !str 市場
+9:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Remodel
+  :name:   !str 改築
+10:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Smithy
+  :name:   !str 鍛冶屋
+11:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Moneylender
+  :name:   !str 金貸し
+12:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Woodcutter
+  :name:   !str 木こり
+13:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Council Room
+  :name:   !str 議事堂
+14:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Throne Room
+  :name:   !str 玉座の間
+15:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Laboratory
+  :name:   !str 研究所
+16:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Mine
+  :name:   !str 鉱山
+17:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Workshop
+  :name:   !str 工房
+18:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Chancellor
+  :name:   !str 宰相
+19:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Feast
+  :name:   !str 祝宴
+20:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Festival
+  :name:   !str 祝祭
+21:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Library
+  :name:   !str 書庫
+22:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '2'
+  :text:   !str Cellar
+  :name:   !str 地下貯蔵庫
+23:
+  :series: 1
+  :type:   3
+  :genre:  5
+  :cost:   '4'
+  :text:   !str Gardens
+  :name:   !str 庭園
+24:
+  :series: 1
+  :type:   3
+  :genre:  10
+  :cost:   '4'
+  :text:   !str Thief
+  :name:   !str 泥棒
+25:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '6'
+  :text:   !str Adventurer
+  :name:   !str 冒険者
+26:
+  :series: 1
+  :type:   3
+  :genre:  11
+  :cost:   '2'
+  :text:   !str Moat
+  :name:   !str 堀
+27:
+  :series: 1
+  :type:   3
+  :genre:  10
+  :cost:   '5'
+  :text:   !str Witch
+  :name:   !str 魔女
+28:
+  :series: 1
+  :type:   3
+  :genre:  10
+  :cost:   '4'
+  :text:   !str Spy
+  :name:   !str 密偵
+29:
+  :series: 1
+  :type:   3
+  :genre:  10
+  :cost:   '4'
+  :text:   !str Militia
+  :name:   !str 民兵
+30:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Village
+  :name:   !str 村
+31:
+  :series: 1
+  :type:   3
+  :genre:  10
+  :cost:   '4'
+  :text:   !str Bureaucrat
+  :name:   !str 役人
+32:
+  :series: 1
+  :type:   3
+  :genre:  9
+  :cost:   '2'
+  :text:   !str Chapel
+  :name:   !str 礼拝堂
+33:
+  :series: 2
+  :type:   3
+  :genre:  12
+  :cost:   '3'
+  :text:   !str Great Hall
+  :name:   !str 大広間
+34:
+  :series: 2
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Upgrade
+  :name:   !str 改良
+35:
+  :series: 2
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Masquerade
+  :name:   !str 仮面舞踏会
+36:
+  :series: 2
+  :type:   3
+  :genre:  12
+  :cost:   '6'
+  :text:   !str Nobles
+  :name:   !str 貴族
+37:
+  :series: 2
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Conspirator
+  :name:   !str 共謀者
+38:
+  :series: 2
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Trading Post
+  :name:   !str 交易場
+39:
+  :series: 2
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Mining Village
+  :name:   !str 鉱山の村
+40:
+  :series: 2
+  :type:   3
+  :genre:  5
+  :cost:   '5'
+  :text:   !str Duke
+  :name:   !str 公爵
+41:
+  :series: 2
+  :type:   3
+  :genre:  10
+  :cost:   '5'
+  :text:   !str Torturer
+  :name:   !str 拷問人
+42:
+  :series: 2
+  :type:   3
+  :genre:  10
+  :cost:   '3'
+  :text:   !str Swindler
+  :name:   !str 詐欺師
+43:
+  :series: 2
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Steward
+  :name:   !str 執事
+44:
+  :series: 2
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Baron
+  :name:   !str 男爵
+45:
+  :series: 2
+  :type:   3
+  :genre:  10
+  :cost:   '5'
+  :text:   !str Minion
+  :name:   !str 寵臣
+46:
+  :series: 2
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Scout
+  :name:   !str 偵察員
+47:
+  :series: 2
+  :type:   3
+  :genre:  9
+  :cost:   '2'
+  :text:   !str Pawn
+  :name:   !str 手先
+48:
+  :series: 2
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Ironworks
+  :name:   !str 鉄工所
+49:
+  :series: 2
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Coppersmith
+  :name:   !str 銅細工師
+50:
+  :series: 2
+  :type:   3
+  :genre:  9
+  :cost:   '2'
+  :text:   !str Courtyard
+  :name:   !str 中庭
+51:
+  :series: 2
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Wishing Well
+  :name:   !str 願いの井戸
+52:
+  :series: 2
+  :type:   3
+  :genre:  2
+  :cost:   '6'
+  :text:   !str Harem
+  :name:   !str ハーレム
+53:
+  :series: 2
+  :type:   3
+  :genre:  10
+  :cost:   '5'
+  :text:   !str Saboteur
+  :name:   !str 破壊工作員
+54:
+  :series: 2
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Bridge
+  :name:   !str 橋
+55:
+  :series: 2
+  :type:   3
+  :genre:  11
+  :cost:   '2'
+  :text:   !str Secret Chamber
+  :name:   !str 秘密の部屋
+56:
+  :series: 2
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Shanty Town
+  :name:   !str 貧民街
+57:
+  :series: 2
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Tribute
+  :name:   !str 貢物
+58:
+  :series: 3
+  :type:   3
+  :genre:  10
+  :cost:   '4'
+  :text:   !str Sea Hag
+  :name:   !str 海の妖婆
+59:
+  :series: 3
+  :type:   3
+  :genre:  10
+  :cost:   '4'
+  :text:   !str Pirate Ship
+  :name:   !str 海賊船
+60:
+  :series: 3
+  :type:   3
+  :genre:  13
+  :cost:   '3'
+  :text:   !str Fishing Village
+  :name:   !str 漁村
+61:
+  :series: 3
+  :type:   3
+  :genre:  10
+  :cost:   '4'
+  :text:   !str Cutpurse
+  :name:   !str 巾着切り
+62:
+  :series: 3
+  :type:   3
+  :genre:  9
+  :cost:   '2'
+  :text:   !str Native Village
+  :name:   !str 原住民の村
+63:
+  :series: 3
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Navigator
+  :name:   !str 航海士
+64:
+  :series: 3
+  :type:   3
+  :genre:  13
+  :cost:   '5'
+  :text:   !str Tactician
+  :name:   !str 策士
+65:
+  :series: 3
+  :type:   3
+  :genre:  12
+  :cost:   '4'
+  :text:   !str Island
+  :name:   !str 島
+66:
+  :series: 3
+  :type:   3
+  :genre:  13
+  :cost:   '5'
+  :text:   !str Merchant Ship
+  :name:   !str 商船
+67:
+  :series: 3
+  :type:   3
+  :genre:  9
+  :cost:   '2'
+  :text:   !str Pearl Diver
+  :name:   !str 真珠採り
+68:
+  :series: 3
+  :type:   3
+  :genre:  13
+  :cost:   '5'
+  :text:   !str Outpost
+  :name:   !str 前哨地
+69:
+  :series: 3
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Warehouse
+  :name:   !str 倉庫
+70:
+  :series: 3
+  :type:   3
+  :genre:  10
+  :cost:   '3'
+  :text:   !str Ambassador
+  :name:   !str 大使
+71:
+  :series: 3
+  :type:   3
+  :genre:  13
+  :cost:   '4'
+  :text:   !str Caravan
+  :name:   !str 隊商
+72:
+  :series: 3
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Treasure Map
+  :name:   !str 宝の地図
+73:
+  :series: 3
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Explorer
+  :name:   !str 探検家
+74:
+  :series: 3
+  :type:   3
+  :genre:  13
+  :cost:   '2'
+  :text:   !str Haven
+  :name:   !str 停泊所
+75:
+  :series: 3
+  :type:   3
+  :genre:  13
+  :cost:   '2'
+  :text:   !str Lighthouse
+  :name:   !str 灯台
+76:
+  :series: 3
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Bazaar
+  :name:   !str バザー
+77:
+  :series: 3
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Salvager
+  :name:   !str 引揚水夫
+78:
+  :series: 3
+  :type:   3
+  :genre:  13
+  :cost:   '5'
+  :text:   !str Wharf
+  :name:   !str 船着場
+79:
+  :series: 3
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Treasury
+  :name:   !str 宝物庫
+80:
+  :series: 3
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Smugglers
+  :name:   !str 密輸人
+81:
+  :series: 3
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Lookout
+  :name:   !str 見張り
+82:
+  :series: 3
+  :type:   3
+  :genre:  10
+  :cost:   '5'
+  :text:   !str Ghost Ship
+  :name:   !str 幽霊船
+83:
+  :series: 3
+  :type:   3
+  :genre:  9
+  :cost:   '2'
+  :text:   !str Embargo
+  :name:   !str 抑留
+84:
+  :series: 10
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Black Market
+  :name:   !str 闇市場
+85:
+  :series: 10
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Envoy
+  :name:   !str 公使
+86:
+  :series: 10
+  :type:   3
+  :genre:  1
+  :cost:   '5'
+  :text:   !str Stash
+  :name:   !str へそくり
+87:
+  :series: 4
+  :type:   3
+  :genre:  9
+  :cost:   '2'
+  :text:   !str Apothecary
+  :name:   !str 薬師
+88:
+  :series: 4
+  :type:   3
+  :genre:  1
+  :cost:   '3'
+  :text:   !str Philosopher's Stone
+  :name:   !str 賢者の石
+89:
+  :series: 4
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Golem
+  :name:   !str ゴーレム
+90:
+  :series: 4
+  :type:   3
+  :genre:  9
+  :cost:   '6'
+  :text:   !str Possession
+  :name:   !str 支配
+91:
+  :series: 4
+  :type:   3
+  :genre:  9
+  :cost:   '2'
+  :text:   !str University
+  :name:   !str 大学
+92:
+  :series: 4
+  :type:   3
+  :genre:  10
+  :cost:   '3'
+  :text:   !str Familiar
+  :name:   !str 使い魔
+93:
+  :series: 4
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Apprentice
+  :name:   !str 弟子
+94:
+  :series: 4
+  :type:   3
+  :genre:  10
+  :cost:   '2'
+  :text:   !str Scrying Pool
+  :name:   !str 念視の泉
+95:
+  :series: 4
+  :type:   3
+  :genre:  5
+  :cost:   '-'
+  :text:   !str Vineyard
+  :name:   !str ブドウ園
+96:
+  :series: 4
+  :type:   3
+  :genre:  9
+  :cost:   '-'
+  :text:   !str Transmute
+  :name:   !str 変成
+97:
+  :series: 4
+  :type:   1
+  :genre:  1
+  :cost:   '4'
+  :text:   !str Potion
+  :name:   !str ポーション
+98:
+  :series: 4
+  :type:   3
+  :genre:  9
+  :cost:   '2'
+  :text:   !str Herbalist
+  :name:   !str 薬草商
+99:
+  :series: 4
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Alchemist
+  :name:   !str 錬金術師
+100:
+  :series: 5
+  :type:   3
+  :genre:  1
+  :cost:   '4'
+  :text:   !str Quarry
+  :name:   !str 石切場
+101:
+  :series: 5
+  :type:   3
+  :genre:  9
+  :cost:   '6'
+  :text:   !str Grand Market
+  :name:   !str 大市場
+102:
+  :series: 5
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Counting House
+  :name:   !str 会計所
+103:
+  :series: 5
+  :type:   3
+  :genre:  1
+  :cost:   '6'
+  :text:   !str Hoard
+  :name:   !str 隠し財産
+104:
+  :series: 5
+  :type:   3
+  :genre:  9
+  :cost:   '7'
+  :text:   !str Expand
+  :name:   !str 拡張
+105:
+  :series: 5
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Monument
+  :name:   !str 記念碑
+106:
+  :series: 5
+  :type:   3
+  :genre:  9
+  :cost:   '7'
+  :text:   !str King's Court
+  :name:   !str 宮廷
+107:
+  :series: 5
+  :type:   3
+  :genre:  9
+  :cost:   '8*'
+  :text:   !str Peddler
+  :name:   !str 行商人
+108:
+  :series: 5
+  :type:   3
+  :genre:  1
+  :cost:   '5'
+  :text:   !str Royal Seal
+  :name:   !str 玉璽
+109:
+  :series: 5
+  :type:   3
+  :genre:  1
+  :cost:   '7'
+  :text:   !str Bank
+  :name:   !str 銀行
+110:
+  :series: 5
+  :type:   3
+  :genre:  1
+  :cost:   '5'
+  :text:   !str Contraband
+  :name:   !str 禁制品
+111:
+  :series: 5
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Trade Route
+  :name:   !str 交易路
+112:
+  :series: 5
+  :type:   3
+  :genre:  1
+  :cost:   '4'
+  :text:   !str Talisman
+  :name:   !str 護符
+113:
+  :series: 5
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Bishop
+  :name:   !str 司教
+114:
+  :series: 5
+  :type:   3
+  :genre:  1
+  :cost:   '3'
+  :text:   !str Loan
+  :name:   !str 借金
+115:
+  :series: 5
+  :type:   1
+  :genre:  5
+  :cost:   '11'
+  :text:   !str Colony
+  :name:   !str 植民地
+116:
+  :series: 5
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Mint
+  :name:   !str 造幣所
+117:
+  :series: 5
+  :type:   3
+  :genre:  10
+  :cost:   '5'
+  :text:   !str Rabble
+  :name:   !str 大衆
+118:
+  :series: 5
+  :type:   3
+  :genre:  9
+  :cost:   '7'
+  :text:   !str Forge
+  :name:   !str 鍛造
+119:
+  :series: 5
+  :type:   3
+  :genre:  1
+  :cost:   '5'
+  :text:   !str Venture
+  :name:   !str 投機
+120:
+  :series: 5
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str City
+  :name:   !str 都市
+121:
+  :series: 5
+  :type:   3
+  :genre:  10
+  :cost:   '6'
+  :text:   !str Goons
+  :name:   !str ならず者
+122:
+  :series: 5
+  :type:   1
+  :genre:  1
+  :cost:   '9'
+  :text:   !str Platinum
+  :name:   !str 白金貨
+123:
+  :series: 5
+  :type:   3
+  :genre:  11
+  :cost:   '3'
+  :text:   !str Watchtower
+  :name:   !str 望楼
+124:
+  :series: 5
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Vault
+  :name:   !str 保管庫
+125:
+  :series: 5
+  :type:   3
+  :genre:  10
+  :cost:   '5'
+  :text:   !str Mountebank
+  :name:   !str 香具師
+126:
+  :series: 5
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Worker's Village
+  :name:   !str 労働者の村
+127:
+  :series: 6
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Menagerie
+  :name:   !str 移動動物園
+128:
+  :series: 6
+  :type:   3
+  :genre:  11
+  :cost:   '4'
+  :text:   !str Horse Traders
+  :name:   !str 馬商人
+129:
+  :series: 6
+  :type:   3
+  :genre:  10
+  :cost:   '3'
+  :text:   !str Fortune Teller
+  :name:   !str 占い師
+130:
+  :series: 6
+  :type:   4
+  :genre:  3
+  :cost:   '0*'
+  :text:   !str Diadem
+  :name:   !str 王冠
+131:
+  :series: 6
+  :type:   4
+  :genre:  14
+  :cost:   '0*'
+  :text:   !str Princess
+  :name:   !str 王女
+132:
+  :series: 6
+  :type:   4
+  :genre:  14
+  :cost:   '0*'
+  :text:   !str Bag of Gold
+  :name:   !str 金貨袋
+133:
+  :series: 6
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Remake
+  :name:   !str 再建
+134:
+  :series: 6
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Harvest
+  :name:   !str 収穫
+135:
+  :series: 6
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Hunting Party
+  :name:   !str 狩猟団
+136:
+  :series: 6
+  :type:   3
+  :genre:  9
+  :cost:   '2'
+  :text:   !str Hamlet
+  :name:   !str 村落
+137:
+  :series: 6
+  :type:   3
+  :genre:  10
+  :cost:   '5'
+  :text:   !str Jester
+  :name:   !str 道化師
+138:
+  :series: 6
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Farming Village
+  :name:   !str 農村
+139:
+  :series: 6
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Tournament
+  :name:   !str 馬上槍試合
+140:
+  :series: 6
+  :type:   3
+  :genre:  5
+  :cost:   '6'
+  :text:   !str Fairgrounds
+  :name:   !str 品評会
+141:
+  :series: 6
+  :type:   3
+  :genre:  1
+  :cost:   '5'
+  :text:   !str Horn of Plenty
+  :name:   !str 豊穣の角笛
+142:
+  :series: 6
+  :type:   3
+  :genre:  10
+  :cost:   '4'
+  :text:   !str Young Witch
+  :name:   !str 魔女娘
+143:
+  :series: 6
+  :type:   4
+  :genre:  14
+  :cost:   '0*'
+  :text:   !str Trusty Steed
+  :name:   !str 名馬
+144:
+  :series: 6
+  :type:   4
+  :genre:  15
+  :cost:   '0*'
+  :text:   !str Followers
+  :name:   !str 郎党
+145:
+  :series: 9
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Oasis
+  :name:   !str オアシス
+146:
+  :series: 9
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Highway
+  :name:   !str 街道
+147:
+  :series: 9
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Develop
+  :name:   !str 開発
+148:
+  :series: 9
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Scheme
+  :name:   !str 画策
+149:
+  :series: 9
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Mandarin
+  :name:   !str 官吏
+150:
+  :series: 9
+  :type:   3
+  :genre:  10
+  :cost:   '4'
+  :text:   !str Noble Brigand
+  :name:   !str 義賊
+151:
+  :series: 9
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Stables
+  :name:   !str 厩舎
+152:
+  :series: 9
+  :type:   3
+  :genre:  9
+  :cost:   '2'
+  :text:   !str Crossroads
+  :name:   !str 岐路
+153:
+  :series: 9
+  :type:   3
+  :genre:  4
+  :cost:   '2'
+  :text:   !str Fool's Gold
+  :name:   !str 愚者の黄金
+154:
+  :series: 9
+  :type:   3
+  :genre:  11
+  :cost:   '4'
+  :text:   !str Trader
+  :name:   !str 交易人
+155:
+  :series: 9
+  :type:   3
+  :genre:  9
+  :cost:   '2'
+  :text:   !str Duchess
+  :name:   !str 公爵夫人
+156:
+  :series: 9
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Spice Merchant
+  :name:   !str 香辛料商人
+157:
+  :series: 9
+  :type:   3
+  :genre:  6
+  :cost:   '3'
+  :text:   !str Tunnel
+  :name:   !str 坑道
+158:
+  :series: 9
+  :type:   3
+  :genre:  9
+  :cost:   '6'
+  :text:   !str Border Village
+  :name:   !str 国境の村
+159:
+  :series: 9
+  :type:   3
+  :genre:  5
+  :cost:   '4'
+  :text:   !str Silk Road
+  :name:   !str シルクロード
+160:
+  :series: 9
+  :type:   3
+  :genre:  10
+  :cost:   '3'
+  :text:   !str Oracle
+  :name:   !str 神託
+161:
+  :series: 9
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Embassy
+  :name:   !str 大使館
+162:
+  :series: 9
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Cartographer
+  :name:   !str 地図職人
+163:
+  :series: 9
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Haggler
+  :name:   !str 値切り屋
+164:
+  :series: 9
+  :type:   3
+  :genre:  5
+  :cost:   '6'
+  :text:   !str Farmland
+  :name:   !str 農地
+165:
+  :series: 9
+  :type:   3
+  :genre:  1
+  :cost:   '5'
+  :text:   !str Ill-Gotten Gains
+  :name:   !str 不正利得
+166:
+  :series: 9
+  :type:   3
+  :genre:  10
+  :cost:   '5'
+  :text:   !str Margrave
+  :name:   !str 辺境伯
+167:
+  :series: 9
+  :type:   3
+  :genre:  1
+  :cost:   '5'
+  :text:   !str Cache
+  :name:   !str 埋蔵金
+168:
+  :series: 9
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Inn
+  :name:   !str 宿屋
+169:
+  :series: 9
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Nomad Camp
+  :name:   !str 遊牧民の野営地
+170:
+  :series: 9
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Jack of All Trades
+  :name:   !str よろずや
+171:
+  :series: 10
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Walled Village
+  :name:   !str 囲郭村
+172:
+  :series: 10
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Governor
+  :name:   !str 総督
+173:
+  :series: 7
+  :type:   3
+  :genre:  11
+  :cost:   '3'
+  :text:   !str Market Square
+  :name:   !str 青空市場
+174:
+  :series: 7
+  :type:   5
+  :genre:  16
+  :cost:   '0'
+  :text:   !str Ruined Market
+  :name:   !str 市場跡地
+175:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Hermit
+  :name:   !str 隠遁者
+176:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Ironmonger
+  :name:   !str 金物商
+177:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '6'
+  :text:   !str Hunting Grounds
+  :name:   !str 狩場
+178:
+  :series: 7
+  :type:   3
+  :genre:  17
+  :cost:   '5'
+  :text:   !str Knights
+  :name:   !str 騎士
+179:
+  :series: 7
+  :type:   3
+  :genre:  17
+  :cost:   '5'
+  :text:   !str Sir Vander
+  :name:   !str サー・ヴァンデル
+180:
+  :series: 7
+  :type:   3
+  :genre:  17
+  :cost:   '5'
+  :text:   !str Sir Destry
+  :name:   !str サー・デストリー
+181:
+  :series: 7
+  :type:   3
+  :genre:  17
+  :cost:   '5'
+  :text:   !str Sir Bailey
+  :name:   !str サー・ベイリー
+182:
+  :series: 7
+  :type:   3
+  :genre:  17
+  :cost:   '4'
+  :text:   !str Sir Martin
+  :name:   !str サー・マーチン
+183:
+  :series: 7
+  :type:   3
+  :genre:  17
+  :cost:   '5'
+  :text:   !str Sir Michael
+  :name:   !str サー・マイケル
+184:
+  :series: 7
+  :type:   3
+  :genre:  17
+  :cost:   '5'
+  :text:   !str Dame Anna
+  :name:   !str デイム・アンナ
+185:
+  :series: 7
+  :type:   3
+  :genre:  18
+  :cost:   '5'
+  :text:   !str Dame Josephine
+  :name:   !str デイム・ジョセフィーヌ
+186:
+  :series: 7
+  :type:   3
+  :genre:  17
+  :cost:   '5'
+  :text:   !str Dame Sylvia
+  :name:   !str デイム・シルビア
+187:
+  :series: 7
+  :type:   3
+  :genre:  17
+  :cost:   '5'
+  :text:   !str Dame Natalie
+  :name:   !str デイム・ナタリー
+188:
+  :series: 7
+  :type:   3
+  :genre:  17
+  :cost:   '5'
+  :text:   !str Dame Molly
+  :name:   !str デイム・モリー
+189:
+  :series: 7
+  :type:   3
+  :genre:  1
+  :cost:   '5'
+  :text:   !str Counterfeit
+  :name:   !str 偽造通貨
+190:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '1'
+  :text:   !str Poor House
+  :name:   !str 救貧院
+191:
+  :series: 7
+  :type:   7
+  :genre:  9
+  :cost:   '0*'
+  :text:   !str Madman
+  :name:   !str 狂人
+192:
+  :series: 7
+  :type:   3
+  :genre:  19
+  :cost:   '5'
+  :text:   !str Cultist
+  :name:   !str 狂信者
+193:
+  :series: 7
+  :type:   6
+  :genre:  20
+  :cost:   '1'
+  :text:   !str Necropolis
+  :name:   !str 共同墓地
+194:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Wandering Minstrel
+  :name:   !str 吟遊詩人
+195:
+  :series: 7
+  :type:   6
+  :genre:  7
+  :cost:   '1'
+  :text:   !str Overgrown Estate
+  :name:   !str 草茂る屋敷
+196:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Junk Dealer
+  :name:   !str 屑屋
+197:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Sage
+  :name:   !str 賢者
+198:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Procession
+  :name:   !str 行進
+199:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Scavenger
+  :name:   !str ゴミあさり
+200:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Forager
+  :name:   !str 採集者
+201:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '6'
+  :text:   !str Altar
+  :name:   !str 祭壇
+202:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Bandit Camp
+  :name:   !str 山賊の宿営地
+203:
+  :series: 7
+  :type:   3
+  :genre:  21
+  :cost:   '4'
+  :text:   !str Death Cart
+  :name:   !str 死の荷車
+204:
+  :series: 7
+  :type:   3
+  :genre:  19
+  :cost:   '4'
+  :text:   !str Marauder
+  :name:   !str 襲撃者
+205:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '2'
+  :text:   !str Squire
+  :name:   !str 従者
+206:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Fortress
+  :name:   !str 城塞
+207:
+  :series: 7
+  :type:   5
+  :genre:  16
+  :cost:   '0'
+  :text:   !str Survivors
+  :name:   !str 生存者
+208:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Rebuild
+  :name:   !str 建て直し
+209:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Catacombs
+  :name:   !str 地下墓所
+210:
+  :series: 7
+  :type:   3
+  :genre:  10
+  :cost:   '5'
+  :text:   !str Rogue
+  :name:   !str 盗賊
+211:
+  :series: 7
+  :type:   5
+  :genre:  16
+  :cost:   '0'
+  :text:   !str Ruined Library
+  :name:   !str 図書館跡地
+212:
+  :series: 7
+  :type:   6
+  :genre:  22
+  :cost:   '1'
+  :text:   !str Hovel
+  :name:   !str 納屋
+213:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Rats
+  :name:   !str ネズミ
+214:
+  :series: 7
+  :type:   5
+  :genre:  16
+  :cost:   '0'
+  :text:   !str Abandoned Mine
+  :name:   !str 廃坑
+215:
+  :series: 7
+  :type:   5
+  :genre:  16
+  :cost:   '0'
+  :text:   !str Ruined Village
+  :name:   !str 廃村
+216:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Graverobber
+  :name:   !str 墓暴き
+217:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Count
+  :name:   !str 伯爵
+218:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Band of Misfits
+  :name:   !str はみだし者
+219:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Mystic
+  :name:   !str 秘術師
+220:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Armory
+  :name:   !str 武器庫
+221:
+  :series: 7
+  :type:   3
+  :genre:  10
+  :cost:   '3'
+  :text:   !str Urchin
+  :name:   !str 浮浪児
+222:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '2'
+  :text:   !str Vagrant
+  :name:   !str 浮浪者
+223:
+  :series: 7
+  :type:   3
+  :genre:  5
+  :cost:   '4'
+  :text:   !str Feodum
+  :name:   !str 封土
+224:
+  :series: 7
+  :type:   3
+  :genre:  9
+  :cost:   '3'
+  :text:   !str Storeroom
+  :name:   !str 物置
+225:
+  :series: 7
+  :type:   3
+  :genre:  11
+  :cost:   '2'
+  :text:   !str Beggar
+  :name:   !str 物乞い
+226:
+  :series: 7
+  :type:   7
+  :genre:  10
+  :cost:   '0*'
+  :text:   !str Mercenary
+  :name:   !str 傭兵
+227:
+  :series: 7
+  :type:   3
+  :genre:  10
+  :cost:   '5'
+  :text:   !str Pillage
+  :name:   !str 略奪
+228:
+  :series: 7
+  :type:   7
+  :genre:  1
+  :cost:   '0*'
+  :text:   !str Spoils
+  :name:   !str 略奪品
+229:
+  :series: 8
+  :type:   3
+  :genre:  9
+  :cost:   '2+'
+  :text:   !str Stonemason
+  :name:   !str 石工
+230:
+  :series: 8
+  :type:   3
+  :genre:  9
+  :cost:   '3+'
+  :text:   !str Doctor
+  :name:   !str 医者
+231:
+  :series: 8
+  :type:   3
+  :genre:  10
+  :cost:   '4'
+  :text:   !str Taxman
+  :name:   !str 収税吏
+232:
+  :series: 8
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Journeyman
+  :name:   !str 熟練工
+233:
+  :series: 8
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Merchant Guild
+  :name:   !str 商人ギルド
+234:
+  :series: 8
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Advisor
+  :name:   !str 助言者
+235:
+  :series: 8
+  :type:   3
+  :genre:  9
+  :cost:   '4+'
+  :text:   !str Herald
+  :name:   !str 伝令官
+236:
+  :series: 8
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Butcher
+  :name:   !str 肉屋
+237:
+  :series: 8
+  :type:   3
+  :genre:  9
+  :cost:   '5'
+  :text:   !str Baker
+  :name:   !str パン屋
+238:
+  :series: 8
+  :type:   3
+  :genre:  9
+  :cost:   '4'
+  :text:   !str Plaza
+  :name:   !str 広場
+239:
+  :series: 8
+  :type:   3
+  :genre:  1
+  :cost:   '3+'
+  :text:   !str Masterpiece
+  :name:   !str 名品
+240:
+  :series: 8
+  :type:   3
+  :genre:  10
+  :cost:   '5'
+  :text:   !str Soothsayer
+  :name:   !str 予言者
+241:
+  :series: 8
+  :type:   3
+  :genre:  9
+  :cost:   '2'
+  :text:   !str Candlestick Maker
+  :name:   !str 蝋燭職人

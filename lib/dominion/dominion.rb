@@ -22,7 +22,7 @@ class DominionLib
     }
     
     sub.each{| key, vol |
-      eval( "#{key}Process( #{vol} )" );
+      eval( "#{key}Process( #{vol} )" )
     }
   end
   
@@ -41,19 +41,25 @@ class DominionLib
     return eachProcess( $1, args ) if name =~ /^(.+?)Process$/
     return []  if [ :get_relate_supply, :get_deck_supply, :get_option_supply ].include?( name )
     return nil
+  end
+  
+  def self::const_missing( name )
+    return nil unless self::const_defined?( :Moduler )
+    if self::Moduler::const_defined?( name )
+      return self::Moduler::const_get( name )
     end
+  end
   
   def inspect
     "<#{@series_name}:" +
       "".tap{| o | break "\t" if @series_name.size <= 5 } + 
-      "\t@series_num=#{@series_num}" +
+      "\t@series_num=#{@series_name}" +
 
       self.instance_variables.select{| sym |
         instance_variable_get( sym ).kind_of?( Hash )
       }.map{| sym |
         "  #{sym}[#{ "%02d" % instance_variable_get( sym ).size }]"
       }.join('') + 
-      
     "  >"
   end
   
